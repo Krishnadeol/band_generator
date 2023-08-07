@@ -1,0 +1,15 @@
+<%- include("partials/header.ejs") -%>
+
+<% if(locals.x &&  locals.y){ %>
+  <h1>Here is a random name </h1>
+
+  <h1> <%= y%> <%= x%> </h1>
+<% } else {%>
+
+<h1>Press the key</h1>
+<%}%>
+
+<form action="/submit" method="POST">
+  <input type="submit" value="Generate Name">
+</form>
+<%- include("partials/footer.ejs") -%>
